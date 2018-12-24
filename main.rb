@@ -14,8 +14,8 @@ end
 
 def cardSelecter(cards)
   dp = Array.new(@MAX_CARD_NUMBER+1){Array.new(@MAX_DECK_COST+1,0)}
-  for itemNum in 0..5 do 
-    for deckCost in 0..6 do 
+  for itemNum in 0..@MAX_CARD_NUMBER do 
+    for deckCost in 0..@MAX_DECK_COST do 
       if itemNum == 0
         dp[itemNum][deckCost] = Array.new 
       elsif deckCost < cards[itemNum-1].cost
